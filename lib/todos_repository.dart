@@ -32,4 +32,8 @@ class TodosRepository{
       throw e;
     }
   }
+
+  Stream observeTodo (){
+    return  Amplify.DataStore.observe(Todo.classType);
+  }
 }
